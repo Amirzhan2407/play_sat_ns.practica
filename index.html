@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра: Собери последовательность</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="logo.png" alt="Логотип компании">
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Экран выбора уровня -->
+            <div class="level-select" id="levelSelect">
+                <h2>Выберите уровень</h2>
+                <div class="level-buttons">
+                    <button class="level-btn" data-level="1">Уровень 1: Рабочее место</button>
+                    <button class="level-btn" data-level="2">Уровень 2: Безопасность</button>
+                    <button class="level-btn" data-level="3">Уровень 3: Клиентский сервис</button>
+                </div>
+            </div>
+
+            <!-- Игровая область (изначально скрыта) -->
+            <div class="game-container hidden" id="gameContainer">
+                <div class="game-header">
+                    <h2>Расставьте шаги в правильном порядке</h2>
+                    <p class="task-text" id="taskText"></p>
+                    <div class="level-info">Уровень: <span id="currentLevel">1</span></div>
+                </div>
+                
+                <!-- Область для правильной последовательности -->
+                <div class="slots-container" id="slotsContainer">
+                    <!-- Слоты будут создаваться динамически в JS -->
+                </div>
+
+                <!-- Карточки для перетаскивания -->
+                <div class="cards-container" id="cardsContainer">
+                    <!-- Карточки будут создаваться динамически в JS -->
+                </div>
+
+                <div class="game-buttons">
+                    <button class="check-button" id="checkButton">Проверить</button>
+                    <button class="back-button" id="backButton">← Назад к выбору</button>
+                </div>
+
+                <!-- Блок с результатом -->
+                <div class="result hidden" id="resultBlock">
+                    <p id="resultText"></p>
+                    <div class="result-buttons">
+                        <button class="next-level-button" id="nextLevelButton">Следующий уровень →</button>
+                        <button class="try-again-button" id="tryAgainButton">Попробовать снова</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
